@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            x:Class="Project191.MainPage">
+
+    <ContentPage Title="Take Photo">
+        <StackLayout Margin="20,35,20,20">
+            <Image x:Name="PhotoImage" />
+            <Button Text="Take Photo" Grid.Row="1" Command="{Binding TakePhotoCommand}" />
+        </StackLayout>        
+    </ContentPage>
+    <!--
+    <ContentPage Title="Photo Picker">
+        <ScrollView>
+            <StackLayout x:Name="StackLayoutXaml" Margin="20,35,20,20" HeightRequest="600">
+                <Label Text="Photo Picker"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+                <Button Text="Pick Photo"
+                        Clicked="OnPickPhotoButtonClicked" />
+                <Button Text="Load Photo"
+                        Clicked="LoadPhotoClicked"/>
+                <Label x:Name="Mlabel"/>
+            </StackLayout> 
+        </ScrollView> 
+    </ContentPage>
+    -->
+
+    <ContentPage Title="Browse Gallery" x:Name="PageName">
+        <StackLayout Margin="0,20,0,0">
+            <StackLayout Orientation="Horizontal">
+             <Picker Title="Sort"
+                     SelectedItem="{Binding SortType, Mode=TwoWay}">
+                <Picker.Items>
+                    <x:String>Rating</x:String> 
+                    <x:String>2</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Rate"
+                    Command="{Binding Path=BindingContext.RatingCommand, Source={x:Reference PageName}}"/>
+            </StackLayout>
+            <ListView x:Name="listView"
+                      ItemsSource="{Binding PhotoSource}"
+                      SeparatorVisibility="None"
+                      RowHeight="300"
+                      Grid.Row="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                            <Image Source="{Binding PhotoFilePath}"
+                                   Aspect="AspectFit"
+                                   Grid.Column="1"
+                                   Margin="0,0,0,10">
+                                <Image.GestureRecognizers>
+                                    <SwipeGestureRecognizer
+                                        Direction="Left"
+                                        Command="{Binding Path=BindingContext.SwipeCommandLeft, Source={x:Reference PageName}}"
+                                        CommandParameter="{Binding .}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <StackLayout Grid.Column="2">
+                                <Label Text="{Binding Rating}"/>
+                            </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <!--
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="2">
+                           </StackLayout>
+       
+        -->
+        <!--
+        <Image x:Name="GalleryPictureXaml" Source="{Binding CurrentPhoto}">
+            <Image.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+            </Image.GestureRecognizers>
+        </Image>
+        -->
+    </ContentPage>
+</TabbedPage>

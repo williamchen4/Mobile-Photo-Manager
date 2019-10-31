@@ -1,0 +1,11 @@
+/Users/WilliamChen/Desktop/Project191/Project191/bin/Debug/netstandard2.0/Project191.deps.json
+/Users/WilliamChen/Desktop/Project191/Project191/bin/Debug/netstandard2.0/Project191.dll
+/Users/WilliamChen/Desktop/Project191/Project191/bin/Debug/netstandard2.0/Project191.pdb
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Project191.csprojAssemblyReference.cache
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Project191.AssemblyInfoInputs.cache
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Project191.AssemblyInfo.cs
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Project191.dll
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Project191.pdb
