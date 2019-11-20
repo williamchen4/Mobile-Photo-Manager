@@ -1,5 +1,6 @@
 FormsViewGroup
 Plugin.CurrentActivity
+Plugin.InputKit
 Plugin.Media
 Plugin.Permissions
 Xamarin.Android.Arch.Core.Common
@@ -44,3 +45,9 @@ Xamarin.Android.Support.ViewPager
 Xamarin.Essentials
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
+Rg.Plugins.Popup.Droid
+Xamarin.Forms.Maps.Android
+Xamarin.GooglePlayServices.Base
+Xamarin.GooglePlayServices.Basement
+Xamarin.GooglePlayServices.Maps
+Xamarin.GooglePlayServices.Tasks

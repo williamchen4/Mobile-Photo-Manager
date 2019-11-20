@@ -20,6 +20,20 @@
           "lib/xamarinios10/Plugin.Permissions.dll": {}
         }
       },
+      "Rg.Plugins.Popup/1.2.0.223": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.121934"
+        },
+        "compile": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -179,14 +193,43 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.InputKit/3.0.15": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.2.0.839982"
+        },
+        "compile": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        },
+        "runtime": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        }
+      },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "Project191/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
+          "Rg.Plugins.Popup": "1.2.0.223",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.InputKit": "3.0.15",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/Project191.dll": {}
@@ -215,6 +258,20 @@
           "lib/xamarinios10/Plugin.Permissions.dll": {}
         }
       },
+      "Rg.Plugins.Popup/1.2.0.223": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.121934"
+        },
+        "compile": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -374,14 +431,43 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.InputKit/3.0.15": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.2.0.839982"
+        },
+        "compile": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        },
+        "runtime": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        }
+      },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "Project191/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
+          "Rg.Plugins.Popup": "1.2.0.223",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.InputKit": "3.0.15",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/Project191.dll": {}
@@ -410,6 +496,20 @@
           "lib/xamarinios10/Plugin.Permissions.dll": {}
         }
       },
+      "Rg.Plugins.Popup/1.2.0.223": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.121934"
+        },
+        "compile": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -569,14 +669,43 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.InputKit/3.0.15": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.2.0.839982"
+        },
+        "compile": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        },
+        "runtime": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        }
+      },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "Project191/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
+          "Rg.Plugins.Popup": "1.2.0.223",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.InputKit": "3.0.15",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/Project191.dll": {}
@@ -605,6 +734,20 @@
           "lib/xamarinios10/Plugin.Permissions.dll": {}
         }
       },
+      "Rg.Plugins.Popup/1.2.0.223": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.121934"
+        },
+        "compile": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
+          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -764,14 +907,43 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.InputKit/3.0.15": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.2.0.839982"
+        },
+        "compile": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        },
+        "runtime": {
+          "lib/xamarin.ios10/Plugin.InputKit.dll": {}
+        }
+      },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll": {}
+        }
+      },
       "Project191/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
+          "Rg.Plugins.Popup": "1.2.0.223",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.InputKit": "3.0.15",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/Project191.dll": {}
@@ -834,6 +1006,36 @@
         "plugin.permissions.3.0.0.12.nupkg.sha512",
         "plugin.permissions.nuspec",
         "readme.txt"
+      ]
+    },
+    "Rg.Plugins.Popup/1.2.0.223": {
+      "sha512": "0ruzj7EedYRUhhsk327z7ymaHzf9E/n6Slg2ZJfOYqtZ14tX1dtWbyNRSmGEnWxLyN1qSq4Od4U6vYupHRpdtw==",
+      "type": "package",
+      "path": "rg.plugins.popup/1.2.0.223",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.pdb",
+        "lib/MonoAndroid/Rg.Plugins.Popup.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.pdb",
+        "lib/netstandard1.0/Rg.Plugins.Popup.dll",
+        "lib/netstandard1.0/Rg.Plugins.Popup.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.pdb",
+        "readme.txt",
+        "rg.plugins.popup.1.2.0.223.nupkg.sha512",
+        "rg.plugins.popup.nuspec"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -1198,6 +1400,59 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.InputKit/3.0.15": {
+      "sha512": "ea0ahzN2XwqswS3jvc1KMIcm7c+B+BEnyJdFptgd5Ml73015A7OKMzsnf3gzAodzVNZtrK/AGctJSbz5fkK6og==",
+      "type": "package",
+      "path": "xamarin.forms.inputkit/3.0.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/Plugin.InputKit.dll",
+        "lib/monoandroid90/Plugin.InputKit.xml",
+        "lib/netstandard1.0/Plugin.InputKit.dll",
+        "lib/netstandard1.0/Plugin.InputKit.xml",
+        "lib/netstandard2.0/Plugin.InputKit.dll",
+        "lib/netstandard2.0/Plugin.InputKit.xml",
+        "lib/xamarin.ios10/Plugin.InputKit.dll",
+        "lib/xamarin.ios10/Plugin.InputKit.xml",
+        "readme.txt",
+        "xamarin.forms.inputkit.3.0.15.nupkg.sha512",
+        "xamarin.forms.inputkit.nuspec"
+      ]
+    },
+    "Xamarin.Forms.Maps/4.3.0.947036": {
+      "sha512": "CFzqd9+KVWvrm8S3LVFt5clmJu2853diExlwMgPL1vSvmKVf4s3OkjVsdGAEG9oLd3GPZcqlYz0YLRwFcMAN5g==",
+      "type": "package",
+      "path": "xamarin.forms.maps/4.3.0.947036",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.xml",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.4.3.0.947036.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
+      ]
+    },
     "Project191/1.0.0": {
       "type": "project",
       "path": "../Project191/Project191.csproj",
@@ -1268,5 +1523,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.3.0.947036 to 4.1.0.555618. Reference the package directly from the project to select a different version. \n Project191.iOS -> Project191 -> Xamarin.Forms (>= 4.3.0.947036) \n Project191.iOS -> Xamarin.Forms (>= 4.1.0.555618)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

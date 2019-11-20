@@ -240,7 +240,7 @@ ldr x16, [x16, #264]
 .word 0xf9406231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 2 25 0
+.loc 2 26 0
 .word 0xf9401bb1
 .word 0xf9407231
 .word 0xb4000051
@@ -250,9 +250,39 @@ bl _p_2
 .word 0xf9408631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 2 26 0
+.loc 2 27 0
 .word 0xf9401bb1
 .word 0xf9409631
+.word 0xb4000051
+.word 0xd63f0220
+bl _p_3
+.word 0xf9401bb1
+.word 0xf940aa31
+.word 0xb4000051
+.word 0xd63f0220
+.loc 2 29 0
+.word 0xf9401bb1
+.word 0xf940ba31
+.word 0xb4000051
+.word 0xd63f0220
+bl _p_4
+.word 0xf9401bb1
+.word 0xf940ce31
+.word 0xb4000051
+.word 0xd63f0220
+.loc 2 30 0
+.word 0xf9401bb1
+.word 0xf940de31
+.word 0xb4000051
+.word 0xd63f0220
+bl _p_5
+.word 0xf9401bb1
+.word 0xf940f231
+.word 0xb4000051
+.word 0xd63f0220
+.loc 2 32 0
+.word 0xf9401bb1
+.word 0xf9410231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xaa1803e0
@@ -262,48 +292,48 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #272]
 .word 0xd2802d01
 .word 0xd2802d01
-bl _p_3
+bl _p_6
 .word 0xf9002fa0
-bl _p_4
+bl _p_7
 .word 0xf9401bb1
-.word 0xf940ca31
+.word 0xf9413631
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf9402fa1
 .word 0xaa1803e0
-bl _p_5
+bl _p_8
 .word 0xf9401bb1
-.word 0xf940e631
+.word 0xf9415231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 2 28 0
+.loc 2 34 0
 .word 0xf9401bb1
-.word 0xf940f631
+.word 0xf9416231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xaa1803e0
 .word 0xf94013a1
 .word 0xf94017a2
 .word 0xaa1803e0
-bl _p_6
+bl _p_9
 .word 0x53001c00
 .word 0xf9002ba0
 .word 0xf9401bb1
-.word 0xf9412231
+.word 0xf9418e31
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf9402ba0
 .word 0x53001c00
 .word 0xaa0003f7
-.loc 2 29 0
+.loc 2 35 0
 .word 0xf9401bb1
-.word 0xf9413e31
+.word 0xf941aa31
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xaa1703e0
 .word 0xaa1703e0
 .word 0xf9401bb1
-.word 0xf9415631
+.word 0xf941c231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xa94163b7
@@ -331,7 +361,7 @@ ldr x16, [x16, #280]
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf9400ba0
-bl _p_7
+bl _p_10
 .word 0xf9400fb1
 .word 0xf9404a31
 .word 0xb4000051
@@ -389,9 +419,9 @@ ldr x16, [x16, #288]
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #296]
-bl _p_8
+bl _p_11
 .word 0xf9006ba0
-bl _p_9
+bl _p_12
 .word 0xf94023b1
 .word 0xf940a631
 .word 0xb4000051
@@ -405,7 +435,7 @@ bl _p_9
 .word 0xaa1603e0
 .word 0xd2800001
 .word 0xf94002c2
-.word 0xf9424c50
+.word 0xf9426050
 .word 0xd63f0200
 .word 0xf94023b1
 .word 0xf940e231
@@ -419,7 +449,7 @@ bl _p_9
 .word 0xf90063a0
 .word 0xd2800000
 .word 0xd2800000
-bl _p_10
+bl _p_13
 .word 0xf9005fa0
 .word 0xf94023b1
 .word 0xf9411a31
@@ -429,7 +459,7 @@ bl _p_10
 .word 0xf94063a2
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf9425050
+.word 0xf9426450
 .word 0xd63f0200
 .word 0xf94023b1
 .word 0xf9414231
@@ -467,7 +497,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #304]
 .word 0xd2801001
 .word 0xd2801001
-bl _p_3
+bl _p_6
 .word 0xaa0003e1
 .word 0xf94057a2
 .word 0xeb1f035f
@@ -508,7 +538,7 @@ ldr x0, [x16, #328]
 .word 0x3901c03f
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_11
+bl _p_14
 .word 0xf94023b1
 .word 0xf9425e31
 .word 0xb4000051
@@ -531,7 +561,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #336]
 .word 0xd2801001
 .word 0xd2801001
-bl _p_3
+bl _p_6
 .word 0xaa0003e1
 .word 0xf94053a2
 .word 0xeb1f035f
@@ -572,7 +602,7 @@ ldr x0, [x16, #360]
 .word 0x3901c03f
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_12
+bl _p_15
 .word 0xf94023b1
 .word 0xf9434631
 .word 0xb4000051
@@ -582,7 +612,7 @@ bl _p_12
 .word 0xf9435631
 .word 0xb4000051
 .word 0xd63f0220
-bl _p_13
+bl _p_16
 .word 0xf9004fa0
 .word 0xf94023b1
 .word 0xf9436e31
@@ -591,7 +621,7 @@ bl _p_13
 .word 0xf9404fa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9413c30
+.word 0xf9414830
 .word 0xd63f0200
 .word 0xf9004ba0
 .word 0xf94023b1
@@ -610,7 +640,7 @@ bl _p_13
 .word 0xaa0103e0
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9429c30
+.word 0xf942ac30
 .word 0xd63f0200
 .word 0xf90043a0
 .word 0xf94023b1
@@ -633,7 +663,7 @@ bl _p_13
 .word 0xaa0303e0
 .word 0xd2800022
 .word 0xf9400063
-.word 0xf941e070
+.word 0xf941f470
 .word 0xd63f0200
 .word 0xf94023b1
 .word 0xf9443231
@@ -651,9 +681,9 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #368]
 .word 0xd2800301
 .word 0xd2800301
-bl _p_3
+bl _p_6
 .word 0xf9003ba0
-bl _p_14
+bl _p_17
 .word 0xf94023b1
 .word 0xf9447631
 .word 0xb4000051
@@ -681,7 +711,7 @@ ldr x2, [x16, #16]
 .word 0xf9400b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_15
+bl _p_18
 .word 0xf90037a0
 .word 0xf94023b1
 .word 0xf944e231
@@ -709,10 +739,10 @@ bl _p_15
 .word 0xd65f03c0
 .word 0xd2801be0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_4:
 .text
@@ -761,7 +791,7 @@ ldr x16, [x16, #376]
 .word 0xaa1a03e0
 .word 0xaa1a03e0
 .word 0x3940035e
-bl _p_17
+bl _p_20
 .word 0xf90043a0
 .word 0xf9402fb1
 .word 0xf940b231
@@ -777,7 +807,7 @@ bl _p_17
 .word 0xaa1a03e0
 .word 0xaa1a03e0
 .word 0x3940035e
-bl _p_18
+bl _p_21
 .word 0xf90043a0
 .word 0xf9402fb1
 .word 0xf940f231
@@ -813,7 +843,7 @@ bl _p_18
 .word 0xaa1a03e0
 .word 0xaa1a03e0
 .word 0x3940035e
-bl _p_19
+bl _p_22
 .word 0xf9004ba0
 .word 0xf9402fb1
 .word 0xf9417631
@@ -836,7 +866,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x1, [x16, #384]
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_20
+bl _p_23
 .word 0x53001c00
 .word 0xf90043a0
 .word 0xf9402fb1
@@ -848,7 +878,7 @@ bl _p_20
 .word 0xaa1a03e0
 .word 0xaa1a03e0
 .word 0x3940035e
-bl _p_19
+bl _p_22
 .word 0xf9004ba0
 .word 0xf9402fb1
 .word 0xf941fe31
@@ -871,7 +901,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x1, [x16, #392]
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_20
+bl _p_23
 .word 0x53001c00
 .word 0xf90043a0
 .word 0xf9402fb1
@@ -902,7 +932,7 @@ bl _p_20
 .word 0xaa1803e0
 .word 0xaa1803e0
 .word 0x3940031e
-bl _p_21
+bl _p_24
 .word 0xf90043a0
 .word 0xf9402fb1
 .word 0xf942ca31
@@ -929,7 +959,7 @@ bl _p_21
 .word 0xaa1803e0
 .word 0xd2800020
 .word 0xd2800020
-bl _p_22
+bl _p_25
 .word 0xfd004fa0
 .word 0xf9402fb1
 .word 0xf9432a31
@@ -938,7 +968,7 @@ bl _p_22
 .word 0xfd404fa0
 .word 0xaa1803e0
 .word 0x3940031e
-bl _p_23
+bl _p_26
 .word 0xf90043a0
 .word 0xf9402fb1
 .word 0xf9434e31
@@ -979,7 +1009,7 @@ bl _p_23
 .word 0xd63f0220
 .word 0xaa1903e0
 .word 0xaa1903e0
-bl _p_24
+bl _p_27
 .word 0xf9402fb1
 .word 0xf943e231
 .word 0xb4000051
@@ -994,7 +1024,7 @@ bl _p_24
 .word 0xaa1503e1
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_25
+bl _p_28
 .word 0xf9402fb1
 .word 0xf9441a31
 .word 0xb4000051
@@ -1017,7 +1047,7 @@ bl _p_25
 .word 0xd63f0220
 .word 0xaa1903e0
 .word 0xaa1903e0
-bl _p_24
+bl _p_27
 .word 0xf9402fb1
 .word 0xf9446a31
 .word 0xb4000051
@@ -1033,7 +1063,7 @@ bl _p_24
 .word 0xaa0203e0
 .word 0xd2800001
 .word 0x3940005e
-bl _p_25
+bl _p_28
 .word 0xf9402fb1
 .word 0xf944a631
 .word 0xb4000051
@@ -1058,7 +1088,7 @@ bl _p_25
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf9400042
-.word 0xf941fc50
+.word 0xf9421050
 .word 0xd63f0200
 .word 0xf9402fb1
 .word 0xf9450631
@@ -1119,7 +1149,7 @@ ldr x16, [x16, #400]
 .word 0xd63f0220
 .word 0xaa1a03e0
 .word 0xaa1a03e0
-bl _p_24
+bl _p_27
 .word 0xf94017b1
 .word 0xf9408a31
 .word 0xb4000051
@@ -1135,7 +1165,7 @@ bl _p_24
 .word 0xaa0203e0
 .word 0xd2800001
 .word 0x3940005e
-bl _p_25
+bl _p_28
 .word 0xf94017b1
 .word 0xf940c631
 .word 0xb4000051
@@ -1151,7 +1181,7 @@ bl _p_25
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0xf9400042
-.word 0xf941fc50
+.word 0xf9421050
 .word 0xd63f0200
 .word 0xf94017b1
 .word 0xf9410631
@@ -1218,7 +1248,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #304]
 .word 0xd2801001
 .word 0xd2801001
-bl _p_3
+bl _p_6
 .word 0xaa0003e1
 .word 0xf9401fa2
 .word 0xeb1f035f
@@ -1259,7 +1289,7 @@ ldr x0, [x16, #328]
 .word 0x3901c03f
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_26
+bl _p_29
 .word 0xf9400fb1
 .word 0xf9413e31
 .word 0xb4000051
@@ -1282,7 +1312,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #336]
 .word 0xd2801001
 .word 0xd2801001
-bl _p_3
+bl _p_6
 .word 0xaa0003e1
 .word 0xf9401ba2
 .word 0xeb1f035f
@@ -1323,7 +1353,7 @@ ldr x0, [x16, #360]
 .word 0x3901c03f
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_27
+bl _p_30
 .word 0xf9400fb1
 .word 0xf9422631
 .word 0xb4000051
@@ -1343,10 +1373,10 @@ bl _p_27
 .word 0xd65f03c0
 .word 0xd2801be0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_7:
 .text
@@ -1416,7 +1446,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xf90037a0
 .word 0xf94037a1
 .word 0xf94037a0
@@ -1430,7 +1460,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf9403ba0
 .word 0xaa1803e0
 .word 0xaa1803e0
@@ -1522,7 +1552,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_a:
 .text
@@ -1560,7 +1590,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xf90037a0
 .word 0xf94037a1
 .word 0xf94037a0
@@ -1574,7 +1604,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf9403ba0
 .word 0xaa1903e0
 .word 0xaa1903e0
@@ -1669,7 +1699,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_b:
 .text
@@ -1706,7 +1736,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xaa0003f3
 .word 0xaa1303e0
 .word 0xaa1303e1
@@ -1720,7 +1750,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf94037a0
 .word 0xaa1903e0
 .word 0xaa1903e0
@@ -1806,7 +1836,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_c:
 .text
@@ -1845,7 +1875,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xf9003ba0
 .word 0xf9403ba1
 .word 0xf9403ba0
@@ -1859,7 +1889,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf9403fa0
 .word 0xaa1803e0
 .word 0xaa1803e0
@@ -1959,7 +1989,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_d:
 .text
@@ -1996,7 +2026,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xaa0003f3
 .word 0xaa1303e0
 .word 0xaa1303e1
@@ -2010,7 +2040,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf94037a0
 .word 0xaa1a03e0
 .word 0xaa1a03e0
@@ -2096,7 +2126,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_e:
 .text
@@ -2134,7 +2164,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xf90037a0
 .word 0xf94037a1
 .word 0xf94037a0
@@ -2148,7 +2178,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf9403ba0
 .word 0xaa1903e0
 .word 0xaa1903e0
@@ -2240,7 +2270,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_f:
 .text
@@ -2277,7 +2307,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xaa0003f3
 .word 0xaa1303e0
 .word 0xaa1303e1
@@ -2291,7 +2321,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf94037a0
 .word 0xaa1903e0
 .word 0xaa1903e0
@@ -2377,7 +2407,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_10:
 .text
@@ -2415,7 +2445,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xf90037a0
 .word 0xf94037a1
 .word 0xf94037a0
@@ -2429,7 +2459,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf9403ba0
 .word 0xaa1903e0
 .word 0xaa1903e0
@@ -2521,7 +2551,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_11:
 .text
@@ -2558,7 +2588,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xaa0003f3
 .word 0xaa1303e0
 .word 0xaa1303e1
@@ -2572,7 +2602,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf94037a0
 .word 0xaa1903e0
 .word 0xaa1903e0
@@ -2658,7 +2688,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_12:
 .text
@@ -2697,7 +2727,7 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x0, [x16, #48]
 .word 0xb9400000
 .word 0x34000220
-bl _p_28
+bl _p_31
 .word 0xf9003ba0
 .word 0xf9403ba1
 .word 0xf9403ba0
@@ -2711,7 +2741,7 @@ bl _p_28
 .word 0xd2800022
 .word 0xd280003e
 .word 0xb900003e
-bl _p_29
+bl _p_32
 .word 0xf9403fa0
 .word 0xaa1803e0
 .word 0xaa1803e0
@@ -2808,7 +2838,7 @@ bl _p_29
 .word 0xd65f03c0
 .word 0xd28018a0
 .word 0xaa1103e1
-bl _p_16
+bl _p_19
 
 Lme_13:
 .text
@@ -2875,234 +2905,258 @@ add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #512]
 br x16
 .word 421
-	.no_dead_strip plt_Xamarin_Forms_Forms_Init
-plt_Xamarin_Forms_Forms_Init:
+	.no_dead_strip plt_Plugin_InputKit_Platforms_iOS_Config_Init
+plt_Plugin_InputKit_Platforms_iOS_Config_Init:
 _p_2:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #520]
 br x16
 .word 426
-	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
-plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
+	.no_dead_strip plt_Rg_Plugins_Popup_Popup_Init
+plt_Rg_Plugins_Popup_Popup_Init:
 _p_3:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #528]
 br x16
 .word 431
-	.no_dead_strip plt_Project191_App__ctor
-plt_Project191_App__ctor:
+	.no_dead_strip plt_Xamarin_Forms_Forms_Init
+plt_Xamarin_Forms_Forms_Init:
 _p_4:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #536]
 br x16
-.word 439
-	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application
-plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application:
+.word 436
+	.no_dead_strip plt_Xamarin_FormsMaps_Init
+plt_Xamarin_FormsMaps_Init:
 _p_5:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #544]
 br x16
-.word 444
-	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary
-plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary:
+.word 441
+	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
+plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
 _p_6:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #552]
 br x16
-.word 449
-	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor
-plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor:
+.word 446
+	.no_dead_strip plt_Project191_App__ctor
+plt_Project191_App__ctor:
 _p_7:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #560]
 br x16
 .word 454
-	.no_dead_strip plt__jit_icall_ves_icall_object_new_specific
-plt__jit_icall_ves_icall_object_new_specific:
+	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application
+plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_LoadApplication_Xamarin_Forms_Application:
 _p_8:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #568]
 br x16
 .word 459
-	.no_dead_strip plt_UIKit_UIImagePickerController__ctor
-plt_UIKit_UIImagePickerController__ctor:
+	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary
+plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary:
 _p_9:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #576]
 br x16
-.word 462
-	.no_dead_strip plt_UIKit_UIImagePickerController_AvailableMediaTypes_UIKit_UIImagePickerControllerSourceType
-plt_UIKit_UIImagePickerController_AvailableMediaTypes_UIKit_UIImagePickerControllerSourceType:
+.word 464
+	.no_dead_strip plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor
+plt_Xamarin_Forms_Platform_iOS_FormsApplicationDelegate__ctor:
 _p_10:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #584]
 br x16
-.word 467
-	.no_dead_strip plt_UIKit_UIImagePickerController_add_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs
-plt_UIKit_UIImagePickerController_add_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs:
+.word 469
+	.no_dead_strip plt__jit_icall_ves_icall_object_new_specific
+plt__jit_icall_ves_icall_object_new_specific:
 _p_11:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #592]
 br x16
-.word 472
-	.no_dead_strip plt_UIKit_UIImagePickerController_add_Canceled_System_EventHandler
-plt_UIKit_UIImagePickerController_add_Canceled_System_EventHandler:
+.word 474
+	.no_dead_strip plt_UIKit_UIImagePickerController__ctor
+plt_UIKit_UIImagePickerController__ctor:
 _p_12:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #600]
 br x16
 .word 477
-	.no_dead_strip plt_UIKit_UIApplication_get_SharedApplication
-plt_UIKit_UIApplication_get_SharedApplication:
+	.no_dead_strip plt_UIKit_UIImagePickerController_AvailableMediaTypes_UIKit_UIImagePickerControllerSourceType
+plt_UIKit_UIImagePickerController_AvailableMediaTypes_UIKit_UIImagePickerControllerSourceType:
 _p_13:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #608]
 br x16
 .word 482
-	.no_dead_strip plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream__ctor
-plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream__ctor:
+	.no_dead_strip plt_UIKit_UIImagePickerController_add_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs
+plt_UIKit_UIImagePickerController_add_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs:
 _p_14:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #616]
 br x16
 .word 487
-	.no_dead_strip plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_get_Task
-plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_get_Task:
+	.no_dead_strip plt_UIKit_UIImagePickerController_add_Canceled_System_EventHandler
+plt_UIKit_UIImagePickerController_add_Canceled_System_EventHandler:
 _p_15:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #624]
 br x16
-.word 498
-	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
-plt__jit_icall_mono_arch_throw_corlib_exception:
+.word 492
+	.no_dead_strip plt_UIKit_UIApplication_get_SharedApplication
+plt_UIKit_UIApplication_get_SharedApplication:
 _p_16:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #632]
 br x16
-.word 509
-	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_EditedImage
-plt_UIKit_UIImagePickerMediaPickedEventArgs_get_EditedImage:
+.word 497
+	.no_dead_strip plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream__ctor
+plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream__ctor:
 _p_17:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #640]
 br x16
-.word 511
-	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_OriginalImage
-plt_UIKit_UIImagePickerMediaPickedEventArgs_get_OriginalImage:
+.word 502
+	.no_dead_strip plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_get_Task
+plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_get_Task:
 _p_18:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #648]
 br x16
-.word 516
-	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_ReferenceUrl
-plt_UIKit_UIImagePickerMediaPickedEventArgs_get_ReferenceUrl:
+.word 513
+	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
+plt__jit_icall_mono_arch_throw_corlib_exception:
 _p_19:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #656]
 br x16
-.word 521
-	.no_dead_strip plt_string_Equals_string
-plt_string_Equals_string:
+.word 524
+	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_EditedImage
+plt_UIKit_UIImagePickerMediaPickedEventArgs_get_EditedImage:
 _p_20:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #664]
 br x16
 .word 526
-	.no_dead_strip plt_UIKit_UIImage_AsPNG
-plt_UIKit_UIImage_AsPNG:
+	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_OriginalImage
+plt_UIKit_UIImagePickerMediaPickedEventArgs_get_OriginalImage:
 _p_21:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #672]
 br x16
-.word 529
-	.no_dead_strip plt_System_nfloat_op_Implicit_int
-plt_System_nfloat_op_Implicit_int:
+.word 531
+	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_ReferenceUrl
+plt_UIKit_UIImagePickerMediaPickedEventArgs_get_ReferenceUrl:
 _p_22:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #680]
 br x16
-.word 534
-	.no_dead_strip plt_UIKit_UIImage_AsJPEG_System_nfloat
-plt_UIKit_UIImage_AsJPEG_System_nfloat:
+.word 536
+	.no_dead_strip plt_string_Equals_string
+plt_string_Equals_string:
 _p_23:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #688]
 br x16
-.word 539
-	.no_dead_strip plt_Project191_iOS_PhotoPickerService_UnregisterEventHandlers
-plt_Project191_iOS_PhotoPickerService_UnregisterEventHandlers:
+.word 541
+	.no_dead_strip plt_UIKit_UIImage_AsPNG
+plt_UIKit_UIImage_AsPNG:
 _p_24:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #696]
 br x16
 .word 544
-	.no_dead_strip plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_SetResult_System_IO_Stream
-plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_SetResult_System_IO_Stream:
+	.no_dead_strip plt_System_nfloat_op_Implicit_int
+plt_System_nfloat_op_Implicit_int:
 _p_25:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #704]
 br x16
 .word 549
-	.no_dead_strip plt_UIKit_UIImagePickerController_remove_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs
-plt_UIKit_UIImagePickerController_remove_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs:
+	.no_dead_strip plt_UIKit_UIImage_AsJPEG_System_nfloat
+plt_UIKit_UIImage_AsJPEG_System_nfloat:
 _p_26:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #712]
 br x16
-.word 560
-	.no_dead_strip plt_UIKit_UIImagePickerController_remove_Canceled_System_EventHandler
-plt_UIKit_UIImagePickerController_remove_Canceled_System_EventHandler:
+.word 554
+	.no_dead_strip plt_Project191_iOS_PhotoPickerService_UnregisterEventHandlers
+plt_Project191_iOS_PhotoPickerService_UnregisterEventHandlers:
 _p_27:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #720]
 br x16
-.word 565
-	.no_dead_strip plt__jit_icall_mono_thread_interruption_checkpoint
-plt__jit_icall_mono_thread_interruption_checkpoint:
+.word 559
+	.no_dead_strip plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_SetResult_System_IO_Stream
+plt_System_Threading_Tasks_TaskCompletionSource_1_System_IO_Stream_SetResult_System_IO_Stream:
 _p_28:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #728]
 br x16
-.word 570
-	.no_dead_strip plt__jit_icall_mono_arch_rethrow_exception
-plt__jit_icall_mono_arch_rethrow_exception:
+.word 564
+	.no_dead_strip plt_UIKit_UIImagePickerController_remove_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs
+plt_UIKit_UIImagePickerController_remove_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs:
 _p_29:
 adrp x16, mono_aot_Project191_iOS_got@PAGE+0
 add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
 ldr x16, [x16, #736]
 br x16
-.word 573
+.word 575
+	.no_dead_strip plt_UIKit_UIImagePickerController_remove_Canceled_System_EventHandler
+plt_UIKit_UIImagePickerController_remove_Canceled_System_EventHandler:
+_p_30:
+adrp x16, mono_aot_Project191_iOS_got@PAGE+0
+add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
+ldr x16, [x16, #744]
+br x16
+.word 580
+	.no_dead_strip plt__jit_icall_mono_thread_interruption_checkpoint
+plt__jit_icall_mono_thread_interruption_checkpoint:
+_p_31:
+adrp x16, mono_aot_Project191_iOS_got@PAGE+0
+add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
+ldr x16, [x16, #752]
+br x16
+.word 585
+	.no_dead_strip plt__jit_icall_mono_arch_rethrow_exception
+plt__jit_icall_mono_arch_rethrow_exception:
+_p_32:
+adrp x16, mono_aot_Project191_iOS_got@PAGE+0
+add x16, x16, mono_aot_Project191_iOS_got@PAGEOFF
+ldr x16, [x16, #760]
+br x16
+.word 588
 plt_end:
 .section __DATA, __bss
 	.align 3
-.lcomm mono_aot_Project191_iOS_got, 744
+.lcomm mono_aot_Project191_iOS_got, 768
 got_end:
 .section __TEXT, __const
 	.align 3
@@ -3125,7 +3179,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "ABC80970-EFFF-47E5-BA0F-057335F3C3FB"
+	.asciz "847BD264-6ED0-4B4D-A3E7-0EB2DB1B4A94"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -3212,14 +3266,14 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 63,744,30,20,10,102,387000831,0
-	.long 4863,128,8,8,8,9,8388607,0
-	.long 30,5960,0,0,1088,656,408,0
-	.long 560,624,456,0,320,48,1080,0
+	.long 63,768,33,20,10,102,387000831,0
+	.long 4926,128,8,8,8,9,8388607,0
+	.long 30,6272,0,0,1336,656,408,0
+	.long 560,624,456,0,320,48,1328,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 228,165,228,242,59,176,69,80,103,80,74,194,153,253,81,212
+	.byte 73,80,83,152,212,26,157,78,41,123,184,155,37,95,107,145
 	.globl _mono_aot_module_Project191_iOS_info
 	.align 3
 _mono_aot_module_Project191_iOS_info:

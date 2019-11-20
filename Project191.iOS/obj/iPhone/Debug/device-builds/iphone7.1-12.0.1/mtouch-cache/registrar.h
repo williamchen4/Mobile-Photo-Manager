@@ -12,6 +12,7 @@
 #import <Speech/Speech.h>
 #import <Photos/Photos.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <MapKit/MapKit.h>
 #import <GLKit/GLKit.h>
 #import <CoreSpotlight/CoreSpotlight.h>
 #import <CoreMotion/CoreMotion.h>
@@ -57,6 +58,7 @@
 @class __MonoMac_NSAsyncSynchronizationContextDispatcher;
 @class NSURLSessionDataDelegate;
 @class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
+@class MapKit_MKMapView__MKMapViewDelegate;
 @class GLKit_GLKView__GLKViewDelegate;
 @class CoreLocation_CLLocationManager__CLLocationManagerDelegate;
 @class UIKit_UIBarButtonItem_Callback;
@@ -209,6 +211,18 @@
 @class Plugin_Media_MediaPickerController;
 @class Plugin_Media_MediaPickerPopoverDelegate;
 @class Plugin_Media_MediaPickerDelegate;
+@class Plugin_InputKit_Platforms_iOS_AutoCompleteViewRenderer;
+@class Plugin_InputKit_Platforms_iOS_EmptyEntryRenderer;
+@class Plugin_InputKit_Platforms_iOS_StatefulStackLayoutRenderer;
+@class Plugin_InputKit_Platforms_iOS_Helpers_AutoCompleteViewSource;
+@class Plugin_InputKit_Platforms_iOS_Helpers_AutoCompleteDefaultDataSource;
+@class Plugin_InputKit_Platforms_iOS_Controls_AutoCompleteTableView;
+@class Plugin_InputKit_Platforms_iOS_IconViewRenderer;
+@class UIAutoCompleteTextField;
+@class RgPopupPlatformRenderer;
+@class RgPopupWindow;
+@class Rg_Plugins_Popup_IOS_Renderers_PopupPageRenderer;
+@class Xamarin_Forms_Maps_iOS_MapRenderer;
 
 @interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
 }
@@ -1068,6 +1082,75 @@
 	-(NSObject *) delegate;
 	-(void) setDelegate:(NSObject *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface Plugin_InputKit_Platforms_iOS_AutoCompleteViewRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
+}
+	-(void) drawRect:(CGRect)p0;
+	-(id) init;
+@end
+
+@interface Plugin_InputKit_Platforms_iOS_EmptyEntryRenderer : Xamarin_Forms_Platform_iOS_EntryRenderer {
+}
+	-(id) init;
+@end
+
+@interface Plugin_InputKit_Platforms_iOS_StatefulStackLayoutRenderer : Xamarin_Forms_Platform_iOS_VisualElementRenderer_1 {
+}
+	-(void) touchesBegan:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesCancelled:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesEnded:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(id) init;
+@end
+
+@interface Plugin_InputKit_Platforms_iOS_Helpers_AutoCompleteViewSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface Plugin_InputKit_Platforms_iOS_Helpers_AutoCompleteDefaultDataSource : Plugin_InputKit_Platforms_iOS_Helpers_AutoCompleteViewSource<UIScrollViewDelegate> {
+}
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(id) init;
+@end
+
+@interface Plugin_InputKit_Platforms_iOS_IconViewRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
+}
+	-(id) init;
+@end
+
+@interface UIAutoCompleteTextField : UITextField<UITextFieldDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface Rg_Plugins_Popup_IOS_Renderers_PopupPageRenderer : Xamarin_Forms_Platform_iOS_PageRenderer {
+}
+	-(void) viewDidLoad;
+	-(void) viewDidUnload;
+	-(void) viewWillAppear:(BOOL)p0;
+	-(void) viewWillDisappear:(BOOL)p0;
+	-(void) viewDidLayoutSubviews;
+	-(id) init;
+@end
+
+@interface Xamarin_Forms_Maps_iOS_MapRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer {
+}
+	-(void) layoutSubviews;
+	-(id) init;
 @end
 
 

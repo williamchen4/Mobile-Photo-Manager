@@ -6,6 +6,7 @@ public class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
+		"Plugin.InputKit.dll",
 		"Plugin.Media.dll",
 		"Plugin.Permissions.dll",
 		"Project191.dll",

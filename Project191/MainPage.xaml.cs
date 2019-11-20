@@ -8,6 +8,8 @@ using Plugin.Media.Abstractions;
 using Project191.Model;
 using Newtonsoft.Json;
 using Project191.ViewModel;
+using Xamarin.Forms.Maps;
+
 
 namespace Project191
 {

@@ -61,3 +61,10 @@
 /Users/WilliamChen/Desktop/Project191/Project191.iOS/obj/iPhone/Debug/Project191.iOS.csproj.CopyComplete
 /Users/WilliamChen/Desktop/Project191/Project191.iOS/obj/iPhone/Debug/Project191.iOS.exe
 /Users/WilliamChen/Desktop/Project191/Project191.iOS/obj/iPhone/Debug/Project191.iOS.pdb
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Plugin.InputKit.dll
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Rg.Plugins.Popup.IOS.dll
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Rg.Plugins.Popup.IOS.pdb
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Rg.Plugins.Popup.dll
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Rg.Plugins.Popup.pdb
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Xamarin.Forms.Maps.dll
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Xamarin.Forms.Maps.iOS.dll

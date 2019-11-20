@@ -5406,7 +5406,7 @@ bl _p_70
 .word 0xf94037a2
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf9414850
+.word 0xf9415450
 .word 0xd63f0200
 .word 0x53001c00
 .word 0xf9400fb1
@@ -24627,9 +24627,9 @@ bl _p_309
 .word 0xf9428e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
 bl _p_165
 bl _p_310
@@ -24941,9 +24941,9 @@ bl _p_283
 .word 0xf9427231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
 bl _p_165
 bl _p_310
@@ -33834,9 +33834,9 @@ bl _p_372
 .word 0xf940b231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
 bl _p_165
 .word 0xaa0003e1
@@ -33996,9 +33996,9 @@ ldr x16, [x16, #3376]
 .word 0xf940da31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
 bl _p_165
 .word 0xaa0003e1
@@ -34311,9 +34311,9 @@ bl _mono_gsharedvt_value_copy
 .word 0xf941aa31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
 bl _p_165
 .word 0xaa0003e1
@@ -34590,9 +34590,9 @@ ldr x16, [x16, #3416]
 .word 0xf940d231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
 bl _p_165
 .word 0xaa0003e1
@@ -36318,9 +36318,9 @@ bl _p_405
 .word 0xf9427231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
 bl _p_165
 bl _p_310
@@ -36522,9 +36522,9 @@ bl _p_283
 .word 0xf9425e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
-.word 0xd288a280
+.word 0xd288a5c0
 .word 0xf2a00020
 bl _p_165
 bl _p_310
@@ -37272,9 +37272,9 @@ ldr x16, [x16, #3568]
 .word 0xf940ea31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
-.word 0xd2889d40
+.word 0xd288a080
 .word 0xf2a00020
 bl _p_165
 .word 0xaa0003e1
@@ -47306,7 +47306,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 235,41,166,16,247,135,240,180,204,228,145,56,5,83,125,249
+	.byte 162,235,69,16,4,171,246,244,87,129,52,130,170,40,82,214
 	.globl _mono_aot_module_Plugin_Permissions_info
 	.align 3
 _mono_aot_module_Plugin_Permissions_info:

@@ -8260,7 +8260,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 160,11,253,70,249,40,31,142,94,163,132,90,7,42,6,40
+	.byte 72,218,204,110,4,253,215,201,115,169,255,251,230,8,160,235
 	.globl _mono_aot_module_System_Drawing_Common_info
 	.align 3
 _mono_aot_module_System_Drawing_Common_info:

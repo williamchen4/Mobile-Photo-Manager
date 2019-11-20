@@ -9,3 +9,4 @@
 /Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Project191.dll
 /Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Project191.pdb
+/Users/WilliamChen/Desktop/Project191/Project191/obj/Debug/netstandard2.0/Pages/PopupListView.xaml.g.cs

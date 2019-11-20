@@ -2,12 +2,35 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             x:Class="Project191.MainPage">
+    <TabbedPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="WidthRequest" Value="100"/>
+            <Setter Property="HeightRequest" Value="50"/>
+        </Style>
+    </TabbedPage.Resources>
 
-    <ContentPage Title="Take Photo">
-        <StackLayout Margin="20,35,20,20">
-            <Image x:Name="PhotoImage" />
-            <Button Text="Take Photo" Grid.Row="1" Command="{Binding TakePhotoCommand}" />
-        </StackLayout>        
+    <ContentPage Title="Take Photo"
+                 xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+                 x:Name="TakePhotoPage">
+            <StackLayout Margin="20,35,20,20">
+                <Button Text="Take Photo"
+                        Command="{Binding TakePhotoCommand}"/>
+                <Button Text="Load Photo"
+                        Command="{Binding LoadPhotoCommand}"/>
+                <Image x:Name="PhotoImage"
+                       Source="{Binding PreviewImage}"
+                       WidthRequest="250"
+                       Aspect="AspectFit"/>
+                <Button Text="Categorize"
+                        Command="{Binding InitialCategorizeCommand}"
+                        IsVisible="{Binding IsPhotoSet}"/>
+
+
+                <Button Text="Save"
+                        IsVisible="{Binding IsPhotoSet}"
+                        Command="{Binding SavePhotoCommand}"/>
+            </StackLayout>
     </ContentPage>
     <!--
     <ContentPage Title="Photo Picker">
@@ -25,20 +48,27 @@
         </ScrollView> 
     </ContentPage>
     -->
-
-    <ContentPage Title="Browse Gallery" x:Name="PageName">
+    <ContentPage Title="Browse Gallery" x:Name="PageName"
+                 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                 xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
         <StackLayout Margin="0,20,0,0">
             <StackLayout Orientation="Horizontal">
              <Picker Title="Sort"
-                     SelectedItem="{Binding SortType, Mode=TwoWay}">
-                <Picker.Items>
-                    <x:String>Rating</x:String> 
-                    <x:String>2</x:String>
-                </Picker.Items>
+                     ItemsSource="{Binding PickerSource}"
+                     SelectedItem="{Binding PickerItem}"
+                     ios:Picker.UpdateMode="WhenFinished">
             </Picker>
-
             <Button Text="Rate"
+                    TextColor="{Binding RateButtonTextColor}"
+                    BackgroundColor="{Binding RateButtonBackgroundColor}"
                     Command="{Binding Path=BindingContext.RatingCommand, Source={x:Reference PageName}}"/>
+            <Button Text="Categorize"
+                    TextColor="{Binding CategorizeButtonTextColor}"
+                    BackgroundColor="{Binding CategorizeButtonBackgroundColor}"
+                Command="{Binding Path=BindingContext.CategorizeCommand, Source={x:Reference PageName}}"/>
+            <Button Text="Print"
+                    Command="{Binding Path=BindingContext.PrintCommand, Source={x:Reference PageName}}"/>
+          
             </StackLayout>
             <ListView x:Name="listView"
                       ItemsSource="{Binding PhotoSource}"
@@ -59,6 +89,7 @@
                                 </Grid.ColumnDefinitions>
                             <Image Source="{Binding PhotoFilePath}"
                                    Aspect="AspectFit"
+                                   Grid.Row="1"
                                    Grid.Column="1"
                                    Margin="0,0,0,10">
                                 <Image.GestureRecognizers>
@@ -66,10 +97,17 @@
                                         Direction="Left"
                                         Command="{Binding Path=BindingContext.SwipeCommandLeft, Source={x:Reference PageName}}"
                                         CommandParameter="{Binding .}"/>
+                                    <SwipeGestureRecognizer
+                                        Direction="Right"
+                                        Command="{Binding Path=BindingContext.SwipeCommandRight, Source={x:Reference PageName}}"
+                                        CommandParameter="{Binding .}"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <StackLayout Grid.Column="2">
-                                <Label Text="{Binding Rating}"/>
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="2">
+                            <Label Text="Rating"/>
+                            <Label Text="{Binding Rating}"/>
                             </StackLayout>
                             </Grid>
                         </ViewCell>
@@ -77,12 +115,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-        <!--
-            <StackLayout Orientation="Horizontal"
-                         Grid.Row="2">
-                           </StackLayout>
-       
-        -->
+        
         <!--
         <Image x:Name="GalleryPictureXaml" Source="{Binding CurrentPhoto}">
             <Image.GestureRecognizers>
@@ -91,5 +124,39 @@
             </Image.GestureRecognizers>
         </Image>
         -->
+    </ContentPage>
+    <ContentPage Title="Map"
+                 xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+                 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+        <StackLayout>
+            <Picker Title="Sort"
+                     Margin="0, 20, 0, 0"
+                     ItemsSource="{Binding MapCategorySource}"
+                     SelectedItem="{Binding MapCategoryPicked}"
+                     ios:Picker.UpdateMode="WhenFinished">
+            </Picker>
+            <maps:Map ItemsSource="{Binding PinSource}">
+                <x:Arguments>
+                    <maps:MapSpan>
+                        <x:Arguments>
+                            <maps:Position>
+                                <x:Arguments>
+                                    <x:Double>36.8575705262244</x:Double>
+                                    <x:Double>-119.758225064836</x:Double>
+                                </x:Arguments>
+                            </maps:Position>
+                            <x:Double>0.03</x:Double>
+                            <x:Double>0.03</x:Double>
+                        </x:Arguments>
+                    </maps:MapSpan>
+                </x:Arguments>
+                <maps:Map.ItemTemplate>
+                    <DataTemplate>
+                        <maps:Pin Position="{Binding PhotoPosition}"
+                                  Label="f"/>
+                    </DataTemplate>    
+                </maps:Map.ItemTemplate>
+            </maps:Map>
+        </StackLayout>
     </ContentPage>
 </TabbedPage>

@@ -5,6 +5,7 @@
 /Users/WilliamChen/Desktop/Project191/Project191.Android/obj/Debug/android/assets/mscorlib.dll
 /Users/WilliamChen/Desktop/Project191/Project191.Android/obj/Debug/android/assets/Newtonsoft.Json.dll
 /Users/WilliamChen/Desktop/Project191/Project191.Android/obj/Debug/android/assets/Plugin.CurrentActivity.dll
+/Users/WilliamChen/Desktop/Project191/Project191.Android/obj/Debug/android/assets/Plugin.InputKit.dll
 /Users/WilliamChen/Desktop/Project191/Project191.Android/obj/Debug/android/assets/Plugin.Media.dll
 /Users/WilliamChen/Desktop/Project191/Project191.Android/obj/Debug/android/assets/Plugin.Permissions.dll
 /Users/WilliamChen/Desktop/Project191/Project191.Android/obj/Debug/android/assets/Project191.dll
