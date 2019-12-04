@@ -6,7 +6,6 @@ using Xamarin.Forms;
 using Xamarin.Essentials;
 using Project191.Model;
 using System.ComponentModel;
-using System.Windows.Input;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
@@ -24,21 +23,18 @@ namespace Project191.ViewModel
         private bool isPhotoSet;
         private string newCategory;
         private string pickerItem;
-        private string photoLatitude;
         private string currentPhoto;
         private string jsonFilePath;
+        private string categoryFilePath;
         private string photoFilePath;
         private string mapCategoryPicked;
-
+        private string photoLabel;
         private Color rateButtonTextColor = Color.Default;
         private Color rateButtonBackgroundColor = Color.Default;
         private Color categorizeButtonTextColor = Color.Default;
         private Color categorizeButtonBackgroundColor = Color.Default;
-
         private PhotoItem photoItem;
         private List<PhotoItem> photoList;
-        private List<string> mapCategorySource = new List<string>();
-        private List<string> pickerSource = new List<string> { "Location", "Rating", "Time" };
         private List<PhotoItem> allPhotos = new List<PhotoItem>();
         private ImageSource previewImage;
         private StackLayout mapContent;
@@ -48,6 +44,9 @@ namespace Project191.ViewModel
         ObservableCollection<Category> allCategories = new ObservableCollection<Category>();
         ObservableCollection<PhotoItem> photoSource = new ObservableCollection<PhotoItem>();
         ObservableCollection<PhotoItem> pinSource = new ObservableCollection<PhotoItem>();
+        ObservableCollection<string> mapCategorySource = new ObservableCollection<string>();
+        ObservableCollection<string> pickerSource = new ObservableCollection<string>
+        { "Location", "Rating", "Time" };
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -61,30 +60,107 @@ namespace Project191.ViewModel
         public Command PopupCommand { get; set; }
         public Command PrintCommand { get; set; }
         public Command InitialCategorizeCommand { get; set; }
+        public Command SaveLabelCommand { get; set; }
 
         // constructor
         public PhotoViewModel()
         {
-            AllCategories.Add(new Category("Cat1"));
-            AllCategories.Add(new Category("Cat2"));
-            PickerSource.Add("Cat1");
-            PickerSource.Add("Cat2");
-            MapCategorySource.Add("Cat1");
-            MapCategorySource.Add("Cat2");
-
-            Console.WriteLine("INIT");
-
+            // path of the file in the phone that stores the photo objects
             JsonFilePath = Path.Combine(Environment.GetFolderPath(
                 Environment.SpecialFolder.LocalApplicationData), "photos.json");
 
+            CategoryFilePath = Path.Combine(Environment.GetFolderPath(
+                Environment.SpecialFolder.LocalApplicationData), "categories.json");
+
+            /*
+            
             if (File.Exists(JsonFilePath))
+            {
                 File.Delete(JsonFilePath);
+            }
+            if (File.Exists(CategoryFilePath))
+            {
+                File.Delete(CategoryFilePath);
+            }
+            return;
+            */
+            
+
             try
             {
-                FileStream stream = new FileStream(JsonFilePath, FileMode.OpenOrCreate);
-                StreamWriter writer = new StreamWriter(stream);
-                writer.WriteLine("[]");
-                writer.Close();
+                if(!File.Exists(JsonFilePath))
+                {
+                    // first time setup
+                    FileStream stream = new FileStream(JsonFilePath, FileMode.Create);
+                    StreamWriter writer = new StreamWriter(stream);
+                    writer.WriteLine("[]");
+                    writer.Close();
+                }
+                else
+                {
+                    // already have photo objects
+                    FileStream stream = new FileStream(JsonFilePath, FileMode.Open);
+                    StreamReader reader = new StreamReader(stream);
+                    string fileContents = reader.ReadToEnd();
+                    reader.Close();
+                    AllPhotos = JsonConvert.DeserializeObject<List<PhotoItem>>(fileContents);
+                    PhotoSource = new ObservableCollection<PhotoItem>(AllPhotos);
+                }
+                // read categories file
+                if (!File.Exists(CategoryFilePath))
+                {
+                    // first time setup
+                    FileStream stream = new FileStream(CategoryFilePath, FileMode.Create);
+                    StreamWriter writer = new StreamWriter(stream);
+                    writer.WriteLine("[]");
+                    writer.Close();
+                }
+                else
+                {
+                    /*
+                    List<string> s = new List<string> { "Foo", "Bar"};
+                    FileStream ss = new FileStream(CategoryFilePath, FileMode.Create);
+                    StreamWriter writer = new StreamWriter(ss);
+                    writer.WriteLine(JsonConvert.SerializeObject(s));
+                    writer.Close();
+                    */
+
+                    // already have categories
+                    FileStream stream = new FileStream(CategoryFilePath, FileMode.Open);
+                    StreamReader reader = new StreamReader(stream);
+                    string fileContents = reader.ReadToEnd();
+                    Console.WriteLine("g" + fileContents);
+                    reader.Close();
+
+                    List<string> fileCategories = JsonConvert.DeserializeObject<List<string>>(fileContents);
+
+
+
+
+                    var categoryObjects = from category in fileCategories
+                                          select new Category(category);
+
+
+                    foreach(string x in fileCategories)
+                    {
+                        MapCategorySource.Add(x);
+                        PickerSource.Add(x);
+                    }
+                       PickerSource.Add("Location");
+                    PickerSource.Add("Rating");
+                    PickerSource.Add("Time");
+
+
+
+                    foreach (var x in PickerSource)
+                    {
+                        Console.WriteLine(x);
+                    }
+                    AllCategories = new ObservableCollection<Category>(categoryObjects);
+
+
+
+                }
             }
             catch (Exception ex)
             {
@@ -109,10 +185,15 @@ namespace Project191.ViewModel
             {
                 return true;
             });
-
+            SaveLabelCommand = new Command(
+            execute: (obj) =>
+            {
+                PhotoItem temp = (PhotoItem)obj;
+            });
             PopupCommand = new Command(
             execute: async () =>
             {
+                // show popup to categorize photo
                 await PopupNavigation.Instance.PopAsync();
 
                 if (NewCategory != null)
@@ -122,6 +203,7 @@ namespace Project191.ViewModel
                     MapCategorySource.Add(NewCategory);
                     NewCategory = null;
                     OnPropertyChanged("NewCategory");
+                    SaveCategoriesToJson();
                 }
                 PhotoItemObject.Categories = (from category in AllCategories
                                               where category.IsChecked
@@ -216,9 +298,7 @@ namespace Project191.ViewModel
                 return true;
             });
         }
-
-
-
+        // functions to color active buttons
         public Color RateButtonTextColor
         {
             get { return rateButtonTextColor; }
@@ -255,7 +335,7 @@ namespace Project191.ViewModel
                 OnPropertyChanged("CategorizeButtonBackgroundColor");
             }
         }
-
+        // functions to check which button is active
         public bool IsRating
         {
             get { return isRating; }
@@ -271,7 +351,13 @@ namespace Project191.ViewModel
             get { return isPhotoSet; }
             set { isPhotoSet = value; }
         }
-        public List<string> MapCategorySource
+        public string CategoryFilePath
+        {
+            get { return categoryFilePath; }
+            set { categoryFilePath = value; }
+        }
+            
+        public ObservableCollection<string> MapCategorySource
         {
             get { return mapCategorySource; }
             set
@@ -279,6 +365,10 @@ namespace Project191.ViewModel
                 mapCategorySource = value;
                 OnPropertyChanged("MapCategorySource");
             }
+        }
+        public bool IsSinglePhoto
+        {
+            get { return AllPhotos.Count <= 1; }
         }
         public StackLayout MapContent
         {
@@ -294,9 +384,17 @@ namespace Project191.ViewModel
             get { return photoMap; }
             set
             {
-                Console.WriteLine("mapp");
                 photoMap = value;
                 OnPropertyChanged("PhotoMap");
+            }
+        }
+        public string PhotoLabel
+        {
+            get { return photoLabel; }
+            set
+            {
+                photoLabel = value;
+                OnPropertyChanged("PhotoLabel");
             }
         }
         public void MapBy()
@@ -306,7 +404,6 @@ namespace Project191.ViewModel
                         select photo;
             PinSource = new ObservableCollection<PhotoItem>(photos);
         }
-        
         public string MapCategoryPicked
         {
             get { return mapCategoryPicked; }
@@ -328,7 +425,6 @@ namespace Project191.ViewModel
                 CategorizeButtonBackgroundColor = IsCategorize ? Color.Green : Color.Default;
             }
         }
-
         public List<PhotoItem> AllPhotos
         {
             get { return allPhotos; }
@@ -375,7 +471,7 @@ namespace Project191.ViewModel
                 OnPropertyChanged("NewCategory");
             }
         }
-        public List<string> PickerSource
+        public ObservableCollection<string> PickerSource
         {
             get { return pickerSource; }
             set
@@ -414,14 +510,6 @@ namespace Project191.ViewModel
             get { return photoLocation; }
             set { photoLocation = value; }
         }
-        public string PhotoLatitude
-        {
-            get
-            {
-                return "Latitude";
-            }
-            set { photoLatitude = value; }
-        }
         public DateTime PhotoTime
         {
             get { return photoTime; }
@@ -441,6 +529,7 @@ namespace Project191.ViewModel
                 OnPropertyChanged("PreviewImage");
             }
         }
+        // decrement photo's rating
         void SwipedLeftRating(object commandParameter)
         {
             PhotoItemObject = (PhotoItem)commandParameter;
@@ -449,6 +538,7 @@ namespace Project191.ViewModel
             if (PickerItem == "Rating")
                 SortBy(PickerItem);
         }
+        // increment photo's rating
         void SwipedRightRating(object commandParameter)
         {
             PhotoItemObject = (PhotoItem)commandParameter;
@@ -457,6 +547,7 @@ namespace Project191.ViewModel
             if (PickerItem == "Rating")
                 SortBy(PickerItem);
         }
+        // removes all categories from photo
         void SwipedLeftCategorize(object commandParameter)
         {
             ((PhotoItem)commandParameter).Categories.Clear();
@@ -464,7 +555,8 @@ namespace Project191.ViewModel
                 AllCategories[i].IsChecked = false;
             SaveToJson();
         }
-        async void SwipedRightCategorize(object commandParameter)
+        // open category picker page
+        async Task SwipedRightCategorize(object commandParameter)
         {
             // reset
             for (int i = 0; i < AllCategories.Count; i++)
@@ -482,7 +574,15 @@ namespace Project191.ViewModel
             page.BindingContext = this;
             await PopupNavigation.Instance.PushAsync(page);
 
-
+            if (NewCategory != null)
+            {
+                AllCategories.Add(new Category(NewCategory, true));
+                PickerSource.Add(NewCategory);
+                MapCategorySource.Add(NewCategory);
+                NewCategory = null;
+                OnPropertyChanged("NewCategory");
+                SaveCategoriesToJson();
+            }
         }
         async Task InitialCategorize()
         {
@@ -491,25 +591,33 @@ namespace Project191.ViewModel
             page.BindingContext = this;
             await PopupNavigation.Instance.PushAsync(page);
         }
-        async void SortBy(string sortType)
+        async Task SortBy(string sortType)
         {
             Func<PhotoItem, Object> orderByFunc = null;
             if (sortType == "Location")
             {
+                // sort by closest to furthest
                 Location currentLocation = await GetCurrentDistance();
                 for (int i = 0; i < AllPhotos.Count; i++)
-                    AllPhotos[i].DistanceToCurrent = Location.CalculateDistance(currentLocation, AllPhotos[i].PhotoLocation, DistanceUnits.Miles);
+                    AllPhotos[i].DistanceToCurrent = Math.Round(Location.CalculateDistance(currentLocation, AllPhotos[i].PhotoLocation, DistanceUnits.Miles), 4);
                 orderByFunc = photoItem => photoItem.DistanceToCurrent;
                 PhotoSource = new ObservableCollection<PhotoItem>(AllPhotos.OrderBy(orderByFunc));
             }
             else if (sortType == "Rating")
             {
+                // get top 5 rated photos
                 orderByFunc = photoItem => photoItem.Rating;
-                PhotoSource = new ObservableCollection<PhotoItem>(AllPhotos.OrderByDescending(orderByFunc));
+                PhotoSource = new ObservableCollection<PhotoItem>(AllPhotos.OrderByDescending(orderByFunc).Take(5));
             }
-            // sort by category
+            else if (sortType == "Time")
+            {
+                // sort by most recent photo
+                orderByFunc = photoItem => photoItem.PhotoTime;
+                PhotoSource = new ObservableCollection<PhotoItem>(AllPhotos.OrderBy(orderByFunc));
+            }
             else
             {
+                // sort by category
                 var categorizedPhotos = from photo in AllPhotos
                                         where photo.Categories.IndexOf(sortType) != -1
                                         select photo;
@@ -527,7 +635,6 @@ namespace Project191.ViewModel
         {
             if (photo != null)
             {
-                //PhotoImage.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                 PreviewImage = ImageSource.FromStream(() => { return photo.GetStream(); });
                 OnPropertyChanged("PreviewImage");
                 IsPhotoSet = true;
@@ -538,24 +645,26 @@ namespace Project191.ViewModel
                 PhotoTime = DateTime.Now;
                 var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
                 PhotoLocation = await Geolocation.GetLocationAsync(request);
-                PhotoLatitude = PhotoLocation.Latitude.ToString();
 
                 // set current PhotoItem object
                 PhotoItemObject = new PhotoItem(PhotoFilePath, PhotoLocation, PhotoTime);
                 PhotoItemObject.PhotoPosition = new Position(PhotoLocation.Latitude, PhotoLocation.Longitude);
 
-                // reset
+                // reset category picker
                 for (int i = 0; i < AllCategories.Count; i++)
                     AllCategories[i].IsChecked = false;
             }
         }
         void SavePhotoClicked()
         {
+            PhotoItemObject.PhotoLabel = PhotoLabel;
+            PhotoLabel = null;
             if (NewCategory != null)
             {
                 AllCategories.Add(new Category(NewCategory, true));
                 PickerSource.Add(NewCategory);
                 MapCategorySource.Add(NewCategory);
+                SaveCategoriesToJson();
             }
 
             var selectedCategories = (from category in AllCategories
@@ -567,7 +676,7 @@ namespace Project191.ViewModel
 
             SaveToJson();
 
-            // reset
+            // reset category picker
             for (int i = 0; i < AllCategories.Count; i++)
                 AllCategories[i].IsChecked = false;
 
@@ -577,9 +686,9 @@ namespace Project191.ViewModel
             NewCategory = null;
             OnPropertyChanged("NewCategory");
         }
-        void SaveToJson()
+
+        async Task SaveToJson()
         {
-            Console.WriteLine("json");
             try
             {
                 // read list of photos from JSON file
@@ -591,11 +700,11 @@ namespace Project191.ViewModel
 
                 // query to see if photo object already in file
                 List<PhotoItem> otherObjects = (from photoItemObject in PhotoList
-                                  where photoItemObject.PhotoFilePath != PhotoItemObject.PhotoFilePath
-                                  select photoItemObject).ToList<PhotoItem>();
+                                                where photoItemObject.PhotoFilePath != PhotoItemObject.PhotoFilePath
+                                                select photoItemObject).ToList<PhotoItem>();
 
                 // photo object already exists; update it
-                if(otherObjects.Count != PhotoList.Count)
+                if (otherObjects.Count != PhotoList.Count)
                 {
                     otherObjects.Add(PhotoItemObject);
                     PhotoList = otherObjects;
@@ -607,7 +716,6 @@ namespace Project191.ViewModel
                     PhotoList.Add(PhotoItemObject);
                     AllPhotos.Add(PhotoItemObject);
                 }
-
                 AllPhotos = (from photo in AllPhotos
                              orderby photo.PhotoTime
                              select photo).ToList();
@@ -618,6 +726,11 @@ namespace Project191.ViewModel
                 StreamWriter writer = new StreamWriter(JsonFilePath, false);
                 writer.WriteLine(JsonConvert.SerializeObject(PhotoList));
                 writer.Close();
+
+                // update locations
+                Location currentLocation = await GetCurrentDistance();
+                for (int i = 0; i < AllPhotos.Count; i++)
+                    AllPhotos[i].DistanceToCurrent = Math.Round(Location.CalculateDistance(currentLocation, AllPhotos[i].PhotoLocation, DistanceUnits.Miles), 4);
             }
             catch (Exception e)
             {
@@ -626,6 +739,11 @@ namespace Project191.ViewModel
         }
         void PrintJsonFile()
         {
+            // for testing
+            StreamWriter writer = new StreamWriter(JsonFilePath, false);
+            writer.WriteLine(JsonConvert.SerializeObject(AllPhotos));
+            writer.Close();
+
             FileStream stream = new FileStream(JsonFilePath, FileMode.Open);
             StreamReader reader = new StreamReader(stream);
 
@@ -633,6 +751,36 @@ namespace Project191.ViewModel
             reader.Close();
 
             var obj = JsonConvert.DeserializeObject<List<PhotoItem>>(json);
+            Console.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented));
+            PrintCategories();
+        }
+        void SaveCategoriesToJson()
+        {
+            try
+            {
+                foreach (var x in MapCategorySource.ToList<string>())
+                    Console.WriteLine(x);
+                // write updated categories to JSON file
+                FileStream stream1 = new FileStream(CategoryFilePath, FileMode.Open);
+                StreamWriter writer = new StreamWriter(stream1);
+                writer.WriteLine(JsonConvert.SerializeObject(MapCategorySource.ToList<string>()));
+                writer.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        void PrintCategories()
+        {
+            FileStream stream = new FileStream(CategoryFilePath, FileMode.Open);
+            StreamReader reader = new StreamReader(stream);
+
+            string json = reader.ReadToEnd();
+            Console.WriteLine("x" + json);
+            reader.Close();
+
+            var obj = JsonConvert.DeserializeObject<List<string>>(json);
             Console.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented));
         }
         private void OnPropertyChanged(string propertyName)

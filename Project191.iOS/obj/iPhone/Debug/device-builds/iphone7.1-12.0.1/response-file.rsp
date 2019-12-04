@@ -164,6 +164,7 @@
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll
+-r=/Users/WilliamChen/.nuget/packages/expandableview/1.0.9/lib/Xamarin.iOS10/ExpandableView.dll
 -r=/Users/WilliamChen/.nuget/packages/newtonsoft.json/12.0.2/lib/netstandard2.0/Newtonsoft.Json.dll
 -r=/Users/WilliamChen/.nuget/packages/plugin.permissions/3.0.0.12/lib/xamarinios10/Plugin.Permissions.dll
 -r=/Users/WilliamChen/.nuget/packages/rg.plugins.popup/1.2.0.223/lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll

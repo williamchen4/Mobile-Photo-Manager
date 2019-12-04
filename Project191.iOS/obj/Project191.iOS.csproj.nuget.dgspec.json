@@ -94,6 +94,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "ExpandableView": {
+              "target": "Package",
+              "version": "[1.0.9, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

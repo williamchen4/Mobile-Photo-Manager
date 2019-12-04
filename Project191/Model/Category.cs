@@ -6,6 +6,7 @@ using Xamarin.Essentials;
 
 namespace Project191.Model 
 {
+    // category class that stores information about a single category for a photo
     public class Category : INotifyPropertyChanged
     {
         private string name;

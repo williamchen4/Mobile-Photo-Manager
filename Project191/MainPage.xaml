@@ -10,88 +10,88 @@
         </Style>
     </TabbedPage.Resources>
 
-    <ContentPage Title="Take Photo"
+    <!-- Page to take/load photos -->
+    <ContentPage Title="New Photo"
                  xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
                  x:Name="TakePhotoPage">
             <StackLayout Margin="20,35,20,20">
-                <Button Text="Take Photo"
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                 <Button Text="Take Photo"
                         Command="{Binding TakePhotoCommand}"/>
                 <Button Text="Load Photo"
-                        Command="{Binding LoadPhotoCommand}"/>
+                        Command="{Binding LoadPhotoCommand}"
+                        Grid.Column="1"/>
+                </Grid>
                 <Image x:Name="PhotoImage"
                        Source="{Binding PreviewImage}"
                        WidthRequest="250"
                        Aspect="AspectFit"/>
-                <Button Text="Categorize"
-                        Command="{Binding InitialCategorizeCommand}"
-                        IsVisible="{Binding IsPhotoSet}"/>
-
-
-                <Button Text="Save"
-                        IsVisible="{Binding IsPhotoSet}"
-                        Command="{Binding SavePhotoCommand}"/>
+                <StackLayout IsVisible="{Binding IsPhotoSet}">
+                    <Entry Text="{Binding PhotoLabel}"
+                           Placeholder="Your Photo label"
+                           PlaceholderColor="Blue"
+                           WidthRequest="100"/>
+                    <Button Text="Categorize"
+                            Command="{Binding InitialCategorizeCommand}"/>
+                    <Button Text="Save"
+                            Command="{Binding SavePhotoCommand}"/>
+                </StackLayout>
             </StackLayout>
     </ContentPage>
-    <!--
-    <ContentPage Title="Photo Picker">
-        <ScrollView>
-            <StackLayout x:Name="StackLayoutXaml" Margin="20,35,20,20" HeightRequest="600">
-                <Label Text="Photo Picker"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center" />
-                <Button Text="Pick Photo"
-                        Clicked="OnPickPhotoButtonClicked" />
-                <Button Text="Load Photo"
-                        Clicked="LoadPhotoClicked"/>
-                <Label x:Name="Mlabel"/>
-            </StackLayout> 
-        </ScrollView> 
-    </ContentPage>
-    -->
-    <ContentPage Title="Browse Gallery" x:Name="PageName"
+
+    <!-- Page to display photos -->
+    <ContentPage Title="Gallery" x:Name="PageName"
                  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-                 xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
-        <StackLayout Margin="0,20,0,0">
-            <StackLayout Orientation="Horizontal">
-             <Picker Title="Sort"
-                     ItemsSource="{Binding PickerSource}"
-                     SelectedItem="{Binding PickerItem}"
-                     ios:Picker.UpdateMode="WhenFinished">
-            </Picker>
-            <Button Text="Rate"
-                    TextColor="{Binding RateButtonTextColor}"
-                    BackgroundColor="{Binding RateButtonBackgroundColor}"
-                    Command="{Binding Path=BindingContext.RatingCommand, Source={x:Reference PageName}}"/>
-            <Button Text="Categorize"
-                    TextColor="{Binding CategorizeButtonTextColor}"
-                    BackgroundColor="{Binding CategorizeButtonBackgroundColor}"
-                Command="{Binding Path=BindingContext.CategorizeCommand, Source={x:Reference PageName}}"/>
-            <Button Text="Print"
-                    Command="{Binding Path=BindingContext.PrintCommand, Source={x:Reference PageName}}"/>
-          
+                 xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+                 xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView">
+        <StackLayout Margin="0,35,0,0">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="Sort By:"
+                       VerticalOptions="Center"/>
+                 <Picker Title="Select"
+                         VerticalOptions="Center"
+                         ItemsSource="{Binding PickerSource}"
+                         SelectedItem="{Binding PickerItem}"
+                         ios:Picker.UpdateMode="WhenFinished"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Button Text="Rate"
+                        TextColor="{Binding RateButtonTextColor}"
+                        BackgroundColor="{Binding RateButtonBackgroundColor}"
+                        Command="{Binding Path=BindingContext.RatingCommand, Source={x:Reference PageName}}"/>
+                <Button Text="Categorize"
+                        TextColor="{Binding CategorizeButtonTextColor}"
+                        BackgroundColor="{Binding CategorizeButtonBackgroundColor}"
+                        Command="{Binding Path=BindingContext.CategorizeCommand, Source={x:Reference PageName}}"/>
+                <Button Text="Print"
+                        Command="{Binding Path=BindingContext.PrintCommand, Source={x:Reference PageName}}"/>
             </StackLayout>
             <ListView x:Name="listView"
                       ItemsSource="{Binding PhotoSource}"
                       SeparatorVisibility="None"
-                      RowHeight="300"
-                      Grid.Row="1">
+                      RowHeight="550"
+                      SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid HorizontalOptions="Center">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
+
                             <Image Source="{Binding PhotoFilePath}"
                                    Aspect="AspectFit"
-                                   Grid.Row="1"
-                                   Grid.Column="1"
-                                   Margin="0,0,0,10">
+                                   HeightRequest="500"
+                                   Grid.Row="1">
                                 <Image.GestureRecognizers>
                                     <SwipeGestureRecognizer
                                         Direction="Left"
@@ -103,11 +103,42 @@
                                         CommandParameter="{Binding .}"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <StackLayout
-                                Grid.Row="1"
-                                Grid.Column="2">
-                            <Label Text="Rating"/>
-                            <Label Text="{Binding Rating}"/>
+                            <StackLayout Grid.Row="1">
+                                <StackLayout.GestureRecognizers>
+                                    <SwipeGestureRecognizer
+                                        Direction="Left"
+                                        Command="{Binding Path=BindingContext.SwipeCommandLeft, Source={x:Reference PageName}}"
+                                        CommandParameter="{Binding .}"/>
+                                    <SwipeGestureRecognizer
+                                        Direction="Right"
+                                        Command="{Binding Path=BindingContext.SwipeCommandRight, Source={x:Reference PageName}}"
+                                        CommandParameter="{Binding .}"/>
+                                </StackLayout.GestureRecognizers>
+
+                                <expandable:ExpandableView BackgroundColor="White">
+                                    <expandable:ExpandableView.PrimaryView>
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand">
+                                            <Label Text="Click to Expand"
+                                                   HorizontalOptions="Start"
+                                                   Font="Bold,20"
+                                                   TextColor="Green" />
+                                            <Label Text="{Binding Rating, StringFormat='Rating: {0}'}"
+                                                   HorizontalOptions="EndAndExpand"
+                                                   FontSize="20"/>
+                                        </StackLayout>
+                                    </expandable:ExpandableView.PrimaryView>
+                                    <expandable:ExpandableView.SecondaryViewTemplate>
+                                        <DataTemplate>
+                                            <StackLayout>
+                                                <Label Text="{Binding PhotoTime, StringFormat='Time Taken: {0}'}" />
+                                                <Label Text="{Binding DistanceToCurrent, StringFormat='Distance From You: {0} miles'}" />
+                                                <Entry Text="{Binding PhotoLabel, Mode=TwoWay}"
+                                                       Placeholder="Your Photo Label"/>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </expandable:ExpandableView.SecondaryViewTemplate>
+                                </expandable:ExpandableView>
                             </StackLayout>
                             </Grid>
                         </ViewCell>
@@ -115,22 +146,15 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-        
-        <!--
-        <Image x:Name="GalleryPictureXaml" Source="{Binding CurrentPhoto}">
-            <Image.GestureRecognizers>
-                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
-                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
-            </Image.GestureRecognizers>
-        </Image>
-        -->
     </ContentPage>
+
+    <!-- Page to display photos on map -->
     <ContentPage Title="Map"
                  xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
                  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
         <StackLayout>
             <Picker Title="Sort"
-                     Margin="0, 20, 0, 0"
+                     Margin="0,35,0,0"
                      ItemsSource="{Binding MapCategorySource}"
                      SelectedItem="{Binding MapCategoryPicked}"
                      ios:Picker.UpdateMode="WhenFinished">

@@ -10515,8 +10515,8 @@ ldr x16, [x16, #1288]
 .word 0xf9408e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e2f40
-.word 0xd29e2f40
+.word 0xd29e4d80
+.word 0xd29e4d80
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -10537,8 +10537,8 @@ bl _p_67
 .word 0xf940de31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3180
-.word 0xd29e3180
+.word 0xd29e4fc0
+.word 0xd29e4fc0
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -10662,8 +10662,8 @@ ldr x16, [x16, #1296]
 .word 0xf9409231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e2f40
-.word 0xd29e2f40
+.word 0xd29e4d80
+.word 0xd29e4d80
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -10684,8 +10684,8 @@ bl _p_67
 .word 0xf940e231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3180
-.word 0xd29e3180
+.word 0xd29e4fc0
+.word 0xd29e4fc0
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -11926,8 +11926,8 @@ ldr x16, [x16, #1400]
 .word 0xf9408e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3400
-.word 0xd29e3400
+.word 0xd29e5240
+.word 0xd29e5240
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -11948,8 +11948,8 @@ bl _p_67
 .word 0xf940de31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3180
-.word 0xd29e3180
+.word 0xd29e4fc0
+.word 0xd29e4fc0
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -12877,8 +12877,8 @@ ldr x2, [x16, #16]
 .word 0xf9414e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3e00
-.word 0xd29e3e00
+.word 0xd29e5c40
+.word 0xd29e5c40
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -12911,8 +12911,8 @@ bl _p_67
 .word 0xf941ce31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e4100
-.word 0xd29e4100
+.word 0xd29e5f40
+.word 0xd29e5f40
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -14544,9 +14544,9 @@ bl _mono_gsharedvt_value_copy
 .word 0xf941aa31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a080
+.word 0xd288bec0
 .word 0xf2a00020
-.word 0xd288a080
+.word 0xd288bec0
 .word 0xf2a00020
 bl _p_136
 .word 0xaa0003e1
@@ -15082,9 +15082,9 @@ ldr x16, [x16, #1608]
 .word 0xf940da31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a080
+.word 0xd288bec0
 .word 0xf2a00020
-.word 0xd288a080
+.word 0xd288bec0
 .word 0xf2a00020
 bl _p_136
 .word 0xaa0003e1
@@ -15250,9 +15250,9 @@ ldr x16, [x16, #1616]
 .word 0xf940f231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a080
+.word 0xd288bec0
 .word 0xf2a00020
-.word 0xd288a080
+.word 0xd288bec0
 .word 0xf2a00020
 bl _p_136
 .word 0xaa0003e1
@@ -16475,8 +16475,8 @@ ldr x16, [x16, #1768]
 .word 0xf9408a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e2f40
-.word 0xd29e2f40
+.word 0xd29e4d80
+.word 0xd29e4d80
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -16497,8 +16497,8 @@ bl _p_67
 .word 0xf940da31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3180
-.word 0xd29e3180
+.word 0xd29e4fc0
+.word 0xd29e4fc0
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -16618,8 +16618,8 @@ ldr x16, [x16, #1784]
 .word 0xf9408e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e2f40
-.word 0xd29e2f40
+.word 0xd29e4d80
+.word 0xd29e4d80
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -16640,8 +16640,8 @@ bl _p_67
 .word 0xf940de31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3180
-.word 0xd29e3180
+.word 0xd29e4fc0
+.word 0xd29e4fc0
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -17894,8 +17894,8 @@ ldr x16, [x16, #1944]
 .word 0xf9409231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3400
-.word 0xd29e3400
+.word 0xd29e5240
+.word 0xd29e5240
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -17916,8 +17916,8 @@ bl _p_67
 .word 0xf940e231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3180
-.word 0xd29e3180
+.word 0xd29e4fc0
+.word 0xd29e4fc0
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -18810,8 +18810,8 @@ ldr x2, [x16, #16]
 .word 0xf9413e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e3e00
-.word 0xd29e3e00
+.word 0xd29e5c40
+.word 0xd29e5c40
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -18844,8 +18844,8 @@ bl _p_67
 .word 0xf941be31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29e4100
-.word 0xd29e4100
+.word 0xd29e5f40
+.word 0xd29e5f40
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -19682,9 +19682,9 @@ bl _p_223
 .word 0xf9428a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a5c0
+.word 0xd288c400
 .word 0xf2a00020
-.word 0xd288a5c0
+.word 0xd288c400
 .word 0xf2a00020
 bl _p_136
 bl _p_242
@@ -19865,8 +19865,8 @@ ldr x16, [x16, #2088]
 .word 0xf9408631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd29ed8c0
-.word 0xd29ed8c0
+.word 0xd29ef700
+.word 0xd29ef700
 bl _p_136
 .word 0xaa0003e1
 .word 0xd2800f80
@@ -19991,9 +19991,9 @@ bl _p_172
 .word 0xf9425a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd288a5c0
+.word 0xd288c400
 .word 0xf2a00020
-.word 0xd288a5c0
+.word 0xd288c400
 .word 0xf2a00020
 bl _p_136
 bl _p_242
@@ -25566,7 +25566,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 114,134,161,214,219,208,57,247,154,49,114,110,240,88,243,162
+	.byte 170,57,146,213,88,77,72,131,70,163,60,155,228,195,10,220
 	.globl _mono_aot_module_Rg_Plugins_Popup_IOS_info
 	.align 3
 _mono_aot_module_Rg_Plugins_Popup_IOS_info:

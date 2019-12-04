@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "Project191/1.0.0": {
         "dependencies": {
+          "ExpandableView": "1.0.9",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.2",
           "Rg.Plugins.Popup": "1.2.0.223",
@@ -20,6 +21,17 @@
         },
         "runtime": {
           "Project191.dll": {}
+        }
+      },
+      "ExpandableView/1.0.9": {
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExpandableView.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -130,6 +142,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ExpandableView/1.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J0L6hdlSob5xKfIzXGgN2SlgQjcYDLfaVAlH3eb8TCyinORRhlexJH5L2woAtcP4VwbczQNse+1l34h0jQnfhg==",
+      "path": "expandableview/1.0.9",
+      "hashPath": "expandableview.1.0.9.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

@@ -22516,8 +22516,8 @@ ldr x16, [x16, #3312]
 .word 0xf9405e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2921600
-.word 0xd2921600
+.word 0xd29247c0
+.word 0xd29247c0
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -22592,8 +22592,8 @@ ldr x16, [x16, #3320]
 .word 0xf940c631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2921d80
-.word 0xd2921d80
+.word 0xd2924f40
+.word 0xd2924f40
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801dc0
@@ -24219,8 +24219,8 @@ ldr x16, [x16, #3416]
 .word 0xf9408631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd292d7c0
-.word 0xd292d7c0
+.word 0xd2930980
+.word 0xd2930980
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801960
@@ -24247,8 +24247,8 @@ bl _p_8
 .word 0xf940ee31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd292e280
-.word 0xd292e280
+.word 0xd2931440
+.word 0xd2931440
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801960
@@ -25133,8 +25133,8 @@ ldr x16, [x16, #3504]
 .word 0xf9405a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2921600
-.word 0xd2921600
+.word 0xd29247c0
+.word 0xd29247c0
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -25181,8 +25181,8 @@ ldr x16, [x16, #3512]
 .word 0xf9405a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2921600
-.word 0xd2921600
+.word 0xd29247c0
+.word 0xd29247c0
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -25255,8 +25255,8 @@ ldr x16, [x16, #3520]
 .word 0xf940be31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd2921d80
-.word 0xd2921d80
+.word 0xd2924f40
+.word 0xd2924f40
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801dc0
@@ -27155,8 +27155,8 @@ ldr x16, [x16, #3720]
 .word 0xf9405231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xd292d7c0
-.word 0xd292d7c0
+.word 0xd2930980
+.word 0xd2930980
 bl _p_131
 .word 0xaa0003e1
 .word 0xd2801960
@@ -29266,7 +29266,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 207,28,189,69,106,8,210,226,94,159,90,241,212,133,204,253
+	.byte 168,106,44,225,199,142,42,8,75,174,204,237,114,120,80,15
 	.globl _mono_aot_module_Xamarin_Forms_Maps_info
 	.align 3
 _mono_aot_module_Xamarin_Forms_Maps_info:

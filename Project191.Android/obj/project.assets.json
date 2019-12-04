@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
+      "ExpandableView/1.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0"
+        },
+        "compile": {
+          "lib/MonoAndroid10/ExpandableView.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/ExpandableView.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
@@ -1013,6 +1025,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ExpandableView": "1.0.9",
           "Newtonsoft.Json": "12.0.2",
           "Rg.Plugins.Popup": "1.2.0.223",
           "Xam.Plugin.Media": "4.0.1.5",
@@ -1031,6 +1044,21 @@
     }
   },
   "libraries": {
+    "ExpandableView/1.0.9": {
+      "sha512": "J0L6hdlSob5xKfIzXGgN2SlgQjcYDLfaVAlH3eb8TCyinORRhlexJH5L2woAtcP4VwbczQNse+1l34h0jQnfhg==",
+      "type": "package",
+      "path": "expandableview/1.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "expandableview.1.0.9.nupkg.sha512",
+        "expandableview.nuspec",
+        "lib/MonoAndroid10/ExpandableView.dll",
+        "lib/Xamarin.iOS10/ExpandableView.dll",
+        "lib/netstandard2.0/ExpandableView.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/ExpandableView.dll"
+      ]
+    },
     "Newtonsoft.Json/12.0.2": {
       "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",

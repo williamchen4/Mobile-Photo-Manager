@@ -19712,7 +19712,7 @@ System_ReadOnlySpan_1_T_BYTE_Equals_object:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd28bc2e0
+.word 0xd28bf4a0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -19737,7 +19737,7 @@ System_ReadOnlySpan_1_T_BYTE_GetHashCode:
 .word 0x910003fd
 .word 0xf9000faf
 .word 0xf9000ba0
-.word 0xd28bd600
+.word 0xd28c07c0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -20639,7 +20639,7 @@ System_Span_1_T_BYTE_Equals_object:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd28bc2e0
+.word 0xd28bf4a0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -20664,7 +20664,7 @@ System_Span_1_T_BYTE_GetHashCode:
 .word 0x910003fd
 .word 0xf9000faf
 .word 0xf9000ba0
-.word 0xd28bd600
+.word 0xd28c07c0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -21372,7 +21372,7 @@ System_ReadOnlySpan_1_T_CHAR_Equals_object:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd28bc2e0
+.word 0xd28bf4a0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -21397,7 +21397,7 @@ System_ReadOnlySpan_1_T_CHAR_GetHashCode:
 .word 0x910003fd
 .word 0xf9000faf
 .word 0xf9000ba0
-.word 0xd28bd600
+.word 0xd28c07c0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -22453,7 +22453,7 @@ System_Span_1_T_CHAR_Equals_object:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd28bc2e0
+.word 0xd28bf4a0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -22478,7 +22478,7 @@ System_Span_1_T_CHAR_GetHashCode:
 .word 0x910003fd
 .word 0xf9000faf
 .word 0xf9000ba0
-.word 0xd28bd600
+.word 0xd28c07c0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -23400,7 +23400,7 @@ System_Span_1_T_INT_Equals_object:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd28bc2e0
+.word 0xd28bf4a0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -23425,7 +23425,7 @@ System_Span_1_T_INT_GetHashCode:
 .word 0x910003fd
 .word 0xf9000faf
 .word 0xf9000ba0
-.word 0xd28bd600
+.word 0xd28c07c0
 bl _p_168
 .word 0xaa0003e1
 .word 0xd2801bc0
@@ -26751,7 +26751,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0
-	.byte 168,33,163,135,90,26,126,201,27,4,200,225,91,112,21,100
+	.byte 228,247,60,61,25,148,110,215,219,5,119,249,91,165,206,147
 	.globl _mono_aot_module_System_Numerics_info
 	.align 3
 _mono_aot_module_System_Numerics_info:

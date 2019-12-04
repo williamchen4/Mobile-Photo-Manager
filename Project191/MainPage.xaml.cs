@@ -10,7 +10,6 @@ using Newtonsoft.Json;
 using Project191.ViewModel;
 using Xamarin.Forms.Maps;
 
-
 namespace Project191
 {
     public partial class MainPage : TabbedPage
@@ -18,6 +17,7 @@ namespace Project191
         public MainPage()
         {
             InitializeComponent();
+            // set binding for MVVM
             PhotoViewModel viewModel = new PhotoViewModel();
             BindingContext = viewModel;
         }

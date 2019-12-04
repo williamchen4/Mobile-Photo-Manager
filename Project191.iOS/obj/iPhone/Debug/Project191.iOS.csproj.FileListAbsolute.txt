@@ -68,3 +68,4 @@
 /Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Rg.Plugins.Popup.pdb
 /Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Xamarin.Forms.Maps.dll
 /Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/Xamarin.Forms.Maps.iOS.dll
+/Users/WilliamChen/Desktop/Project191/Project191.iOS/bin/iPhone/Debug/ExpandableView.dll

@@ -4,14 +4,13 @@
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              x:Class="Project191.Pages.PopupListView">
+
+  <!-- Page to categorize photo -->
   <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
     <StackLayout BackgroundColor="White">
             <ListView
                     ItemsSource="{Binding AllCategories}"
                     SeparatorVisibility="None">
-                <!--
-                    IsVisible="{Binding IsCategorize}"
-                -->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

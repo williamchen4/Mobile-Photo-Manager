@@ -21,7 +21,8 @@ namespace Project191.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-
+            Xamarin.FormsMaps.Init(this, savedInstanceState);
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
 
             LoadApplication(new App());

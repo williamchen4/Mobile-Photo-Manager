@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
 
 namespace Project191.Model
 {
+    // photo class that stores information about a photo
     public class PhotoItem : INotifyPropertyChanged
     {
         private Position photoPosition;
         private List<string> categories;
         private int rating;
         private string photoFilePath;
-        private string photoLatitude;
         private Location photoLocation;
         private DateTime photoTime;
         private double distanceToCurrent;
+        private string photoLabel;
 
         public PhotoItem(string photoFilePath, Location photoLocation, DateTime photoTime)
         {
@@ -27,6 +27,15 @@ namespace Project191.Model
             this.distanceToCurrent = 0;
             this.categories = new List<string>();
             this.photoPosition = new Position(0, 0);
+        }
+        public string PhotoLabel
+        {
+            get { return photoLabel; }
+            set
+            {
+                photoLabel = value;
+                OnPropertyChanged("PhotoLabel");
+            }
         }
         public List<string> Categories
         {
@@ -41,15 +50,11 @@ namespace Project191.Model
         public int Rating
         {
             get { return rating; }
-            set { rating = value;
+            set
+            {
+                rating = value;
                 OnPropertyChanged("Rating");
             }
-        }
-        public string PhotoLatitude
-        {
-            get {
-                return "Latitude" + Environment.NewLine +
-                  "\t" + PhotoLocation.Latitude.ToString(); }
         }
         public string PhotoFilePath
         {

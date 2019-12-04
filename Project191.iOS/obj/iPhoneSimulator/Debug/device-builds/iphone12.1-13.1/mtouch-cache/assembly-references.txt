@@ -25,6 +25,7 @@
 /Users/WilliamChen/.nuget/packages/xamarin.forms/4.1.0.555618/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
 /Users/WilliamChen/.nuget/packages/xamarin.essentials/1.1.0/lib/xamarinios10/Xamarin.Essentials.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.4.0.2/lib/mono/Xamarin.iOS/OpenTK-1.0.dll
+/Users/WilliamChen/.nuget/packages/xamarin.forms.maps/4.3.0.947036/lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll
 /Users/WilliamChen/.nuget/packages/xam.plugin.media/4.0.1.5/lib/xamarinios10/Plugin.Media.dll
 /Users/WilliamChen/.nuget/packages/plugin.permissions/3.0.0.12/lib/xamarinios10/Plugin.Permissions.dll
 /Users/WilliamChen/.nuget/packages/rg.plugins.popup/1.2.0.223/lib/Xamarin.IOS/Rg.Plugins.Popup.dll
@@ -38,5 +39,7 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.4.0.2/lib/mono/Xamarin.iOS/Facades/System.Runtime.Extensions.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.4.0.2/lib/mono/Xamarin.iOS/Facades/System.Reflection.Extensions.dll
 /Users/WilliamChen/.nuget/packages/newtonsoft.json/12.0.2/lib/netstandard2.0/Newtonsoft.Json.dll
+/Users/WilliamChen/.nuget/packages/expandableview/1.0.9/lib/Xamarin.iOS10/ExpandableView.dll
 /Users/WilliamChen/.nuget/packages/xamarin.forms.inputkit/3.0.15/lib/xamarin.ios10/Plugin.InputKit.dll
 /Users/WilliamChen/.nuget/packages/rg.plugins.popup/1.2.0.223/lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll
+/Users/WilliamChen/.nuget/packages/xamarin.forms.maps/4.3.0.947036/lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll

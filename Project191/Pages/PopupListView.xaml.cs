@@ -11,6 +11,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Project191.Pages
 {
+    // popup page to set categories for a photo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PopupListView : PopupPage
     {
@@ -22,7 +23,6 @@ namespace Project191.Pages
         private async void OnClose(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PopAsync();
-            Console.WriteLine("popup close");
         }
         
     }
